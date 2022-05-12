@@ -1,0 +1,15 @@
+[Unit]
+Description=Simple Http Server
+Documentation=https://docs.python.org/3/library/http.server.html
+
+
+[Service]
+
+Type=simple
+ExecStart=/usr/bin/python3 -m http.server
+ExecStop=/bin/kill -9 $MAINPID
+#Sandboxing option
+#End Sandboxing
+
+[Install]
+WantedBy=multi-user.target
