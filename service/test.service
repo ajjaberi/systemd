@@ -1,13 +1,12 @@
 [Unit]
-Description=Simple Http Server
-Documentation=https://docs.python.org/3/library/http.server.html
+Description=Test service to verify security directives
 
 
 [Service]
 
 Type=simple
-ExecStart=/usr/bin/python3 -m http.server
-ExecStop=/bin/kill -9 $MAINPID
+ExecStart=/user/local/bin/test_app
+
 #Sandboxing option
 #End Sandboxing
 
